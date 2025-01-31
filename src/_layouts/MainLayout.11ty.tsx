@@ -4,15 +4,16 @@ import { SlackPage } from '@components/SlackPage.11ty';
 import { Header } from '@components/partials/common/Header';
 import { Footer } from '@components/partials/common/Footer';
 import { ContentPage } from '@components/ContentPage.11ty';
-
+import { SeoMeta } from '@components/partials/common/SeoMeta';
+import { PageComponent } from 'src/types/common';
 
 export const MainLayout = ({ content, title, events, version, component }: ViewProps): JSX.Element => {
 
   const getComponent = () => {
     switch (component) {
-      case 'index':
+      case PageComponent.Index:
         return <IndexPage events={events} />;
-      case 'slack':
+      case PageComponent.Slack:
         return <SlackPage version={version} />;
       default:
         return <ContentPage content={content} />;
@@ -26,7 +27,7 @@ export const MainLayout = ({ content, title, events, version, component }: ViewP
         <meta charSet="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+        <SeoMeta component={component} />
         <title>{title}</title>
         <link rel="stylesheet" type="text/css" href="/src/styles/globals.css" />
        

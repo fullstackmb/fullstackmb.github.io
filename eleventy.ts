@@ -1,4 +1,5 @@
 import { Event } from "@components/IndexPage.11ty";
+import { PageComponent } from "src/types/commond";
 
 export type ViewProps = {
   content: string;
@@ -8,5 +9,5 @@ export type ViewProps = {
     version: string;
     hash: string;
   };
-  component?: string;
+  component?: PageComponent;
 };

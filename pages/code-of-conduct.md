@@ -1,6 +1,7 @@
 ---
 title: Full Stack MB | Code of Conduct
 layout: MainLayout.11ty.tsx
+component: code-of-conduct
 ---
 
 ## 1. Purpose

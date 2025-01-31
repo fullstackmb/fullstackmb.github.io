@@ -34,7 +34,7 @@ export default function (eleventyConfig) {
     return version.default ? await version.default() : [];
   });
 
-  eleventyConfig.addExtension(['11ty.jsx', '11ty.tsx', '.tsx'], {
+  eleventyConfig.addExtension(['11ty.jsx', '11ty.tsx', '.tsx', '.ts'], {
     key: '11ty.js',
     compile: async (str, inputPath) => {
       
