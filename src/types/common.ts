@@ -4,18 +4,20 @@ export enum PageComponent {
   CodeOfConduct = 'code-of-conduct',
 }
 
-export interface Event {
-  title: string;
-  date: string;
+interface Venue {
   id: string;
+  name: string;
+  address: string;
+}
+
+export interface Event {
+  id: string;
+  title: string;
   description: string;
+  date: string;
   enddate: string;
-  status: string;
-  logo: string;
   link: string;
-  venue: {
-    name: string;
-    address: string;
-    id: string;
-  };
+  logo: string;
+  status: 'upcoming' | 'past' | 'cancelled';
+  venue: Venue;
 }
