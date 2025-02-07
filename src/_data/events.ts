@@ -1,4 +1,6 @@
 import EleventyFetch from '@11ty/eleventy-fetch';
+import { marked } from 'marked';
+import { Event } from 'src/types/common';
 
 export default async function () {
   const eventsApiUrl = 'https://fullstackmbapi.azurewebsites.net/api/events';
@@ -18,13 +20,19 @@ export default async function () {
     if (!Array.isArray(data.events)) {
       console.log('Data is not an array, looking for events property');
       if (data.events && Array.isArray(data.events)) {
-        return data.events;
+        return data.events.map((event: Event) => ({
+          ...event,
+          description: marked(event.description),
+        }));
       }
       console.error('Could not find valid events array in response');
       return [];
     }
 
-    return data.events;
+    return data.events.map((event: Event) => ({
+      ...event,
+      description: marked(event.description),
+    })); 
   } catch (error) {
     console.error('Error fetching events:', error);
     // Log more details about the error
