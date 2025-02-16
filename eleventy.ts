@@ -1,5 +1,4 @@
-import { Event } from "@components/IndexPage.11ty";
-import { PageComponent } from "src/types/commond";
+import { PageComponent, Event } from "src/types/common";
 
 export type ViewProps = {
   content: string;

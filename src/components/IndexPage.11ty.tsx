@@ -1,25 +1,8 @@
 import { formatDate } from 'src/lib';
+import { Event } from 'src/types/common';
 import { Hero } from './partials/main-page/Hero';
 import { Sponsors } from './partials/main-page/Sponsors';
 // import { Friends } from "./partials/main-page/Friends";
-
-interface Venue {
-  id: string;
-  name: string;
-  address: string;
-}
-
-export interface Event {
-  id: string;
-  title: string;
-  description: string;
-  date: string;
-  enddate: string;
-  link: string;
-  logo: string;
-  status: 'upcoming' | 'past' | 'cancelled';
-  venue: Venue;
-}
 
 export function IndexPage({ events }: { events: Event[] }) {
   const nextEvent = events[0];
