@@ -6,6 +6,9 @@ on:
     - 'main'
     - 'ft/*'
     - 'hf/*'
+  pull_request:
+    branches:
+    - 'main'
   schedule:
     - cron: 0 2 * * *
 
@@ -35,10 +38,17 @@ jobs:
               with:
                 node-version: lts/*
 
+            - name: Install Dependencies
+              run: npm install
+
             - name: Build Site
+              run: npm run build -- --pathprefix $PATH_PREFIX
+
+            - name: Run E2E Tests
+              if: github.ref_name == 'main' || github.event_name == 'pull_request'
               run: |
-                npm install
-                npm run build -- --pathprefix $PATH_PREFIX
+                npx playwright install --with-deps
+                npm run test:e2e
 
             - name: Upload Site Files as Artifact
               uses: actions/upload-pages-artifact@v3
