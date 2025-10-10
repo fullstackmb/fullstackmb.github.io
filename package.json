@@ -63,7 +63,7 @@
     "@types/node": "^20.11.24",
     "concurrently": "^9.1.2",
     "esbuild": "^0.25.0",
-    "happy-dom": "^15.10.2",
+    "happy-dom": "^20.0.0",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
