@@ -3,15 +3,18 @@
   "version": "3.1.1",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf _site",
+    "clean": "rimraf _site .cache",
     "dev": "npm run client:build && concurrently \"npm run dev:eleventy\" \"npm run client:watch\"",
-    "dev:eleventy": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts --serve",
+    "dev:eleventy": "set -a && [ -f .env ] && . ./.env; set +a; tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts --serve",
     "client:build": "node build-client.js",
     "client:watch": "node build-client.js --watch",
     "build": "npm run client:build && tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:debug": "playwright test --debug"
+    "test:e2e:debug": "playwright test --debug",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "keywords": [],
   "author": {
@@ -49,6 +52,7 @@
     "jsdom": "^26.0.0",
     "jsx-async-runtime": "^0.1.8",
     "marked": "^15.0.6",
+    "node-ical": "^0.27.1",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -63,12 +67,18 @@
     "@types/node": "^20.11.24",
     "concurrently": "^9.1.2",
     "esbuild": "^0.25.0",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.7.0",
     "happy-dom": "^15.10.2",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
     "prettier": "^3.2.5",
     "rimraf": "^6.0.1",
-    "tsx": "^4.7.2"
+    "tsx": "^4.7.2",
+    "typescript-eslint": "^8.65.0"
   }
 }

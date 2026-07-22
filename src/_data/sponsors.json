@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Apptius",
+    "imgUrl": "https://fsmb.s3.ca-central-1.amazonaws.com/sponsors/Apptius-Logo.png",
+    "url": "http://apptius.com"
+  },
+  {
+    "name": "Imaginet",
+    "imgUrl": "https://fsmb.s3.ca-central-1.amazonaws.com/sponsors/imaginet.png",
+    "url": "http://imaginet.com"
+  },
+  {
+    "name": "iQmetrix",
+    "imgUrl": "https://fsmb.s3.ca-central-1.amazonaws.com/sponsors/iqmetrix-logo.png",
+    "url": "http://www.iqmetrix.com"
+  },
+  {
+    "name": "Vision Critical",
+    "imgUrl": "https://fsmb.s3.ca-central-1.amazonaws.com/sponsors/vc_logo.jpg",
+    "url": "http://www.visioncritical.com/"
+  },
+  {
+    "name": "Microsoft",
+    "imgUrl": "https://fsmb.s3.ca-central-1.amazonaws.com/sponsors/MSFT.png",
+    "url": "http://blogs.msdn.com/b/cdndevs/"
+  },
+  {
+    "name": "uniPoint",
+    "imgUrl": "https://fsmb.s3.ca-central-1.amazonaws.com/sponsors/uniPoint-DotNet-User-Group.png",
+    "url": "https://www.unipointsoftware.com/"
+  }
+]
