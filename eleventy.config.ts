@@ -91,7 +91,7 @@ export default function (eleventyConfig) {
       input: './pages',
       layouts: '../src/_layouts',
       output: '_site',
-      data: './src/_data',
+      data: '../src/_data',
     },
     pathPrefix: '/',
     markdownTemplateEngine: false,

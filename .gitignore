@@ -7,3 +7,9 @@ _site/
 playwright-report/
 test-results/
 .DS_Store
+
+# personal Claude Code preferences (not shared)
+CLAUDE.local.md
+
+# local env overrides
+.env
