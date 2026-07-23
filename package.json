@@ -77,13 +77,5 @@
     "rimraf": "^6.0.1",
     "tsx": "^4.7.2",
     "typescript-eslint": "^8.65.0"
-  },
-  "overrides": {
-    "chokidar": {
-      "picomatch": "^2.3.2"
-    },
-    "micromatch": {
-      "picomatch": "^2.3.2"
-    }
   }
 }
