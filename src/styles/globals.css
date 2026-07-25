@@ -98,7 +98,7 @@ body {
 
 /* Event Card */
 .event-card {
-  border: 2px solid #4FFFA7;
+  border: 2px solid #4fffa7;
   border-radius: 12px;
   background: white;
   padding: 32px;
@@ -176,7 +176,14 @@ body {
 }
 
 .event-card-small:hover {
-  border-color: #4FFFA7;
+  border-color: #4fffa7;
+}
+
+.event-card-small img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .event-card-content {
@@ -194,21 +201,21 @@ body {
 }
 
 .button-primary {
-  background-color: #4FFFA7;
+  background-color: #4fffa7;
   color: #1a202c;
 }
 
 .button-primary:hover {
-  background-color: #3DE996;
+  background-color: #3de996;
 }
 
 .button-outline {
-  border: 1px solid #4FFFA7;
-  color: #4FFFA7;
+  border: 1px solid #4fffa7;
+  color: #4fffa7;
 }
 
 .button-outline:hover {
-  background-color: #4FFFA7;
+  background-color: #4fffa7;
   color: #1a202c;
 }
 
@@ -223,7 +230,7 @@ body {
   display: grid;
   /* grid-template-columns: 1fr 1fr; */
   gap: 32px;
-  place-items: center; 
+  place-items: center;
 }
 
 .sponsor-card {
@@ -435,19 +442,19 @@ body {
   .header {
     padding: 12px 0;
   }
-  
+
   .header-content {
     gap: 8px;
   }
-  
+
   .logo-section {
     gap: 12px;
   }
-  
+
   .logo-text h1 {
     font-size: 18px;
   }
-  
+
   .logo-subtitle {
     font-size: 12px;
   }
@@ -455,38 +462,36 @@ body {
   .nav-links {
     display: none;
   }
-  
+
   .events-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .event-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .sponsors-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .groups-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .mobile-menu-button {
     display: block;
     width: 48px;
     height: 48px;
   }
-  
 
   .footer-grid {
     gap: 24px;
   }
-  
 }
 
 .why-join-slack {
@@ -534,11 +539,11 @@ body {
     grid-template-columns: 1fr;
     padding: 0 16px;
   }
-  
+
   .why-join-slack {
     padding: 40px 0;
   }
-  
+
   .why-join-slack h2 {
     font-size: 28px;
     margin-bottom: 32px;
@@ -593,14 +598,14 @@ body {
 
 .form-group input:focus {
   outline: none;
-  border-color: #4FFFA7;
+  border-color: #4fffa7;
   box-shadow: 0 0 0 3px rgba(79, 255, 167, 0.1);
 }
 
 .submit-button {
   width: 100%;
   padding: 12px;
-  background: #4FFFA7;
+  background: #4fffa7;
   border: none;
   border-radius: 6px;
   color: #1a1a1a;
@@ -631,7 +636,7 @@ body {
     margin: 0 16px;
     padding: 24px;
   }
-  
+
   .slack-invite-form {
     padding: 40px 0;
   }
