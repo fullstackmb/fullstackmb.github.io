@@ -65,7 +65,7 @@
     "@testing-library/dom": "^10.4.2",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^20.11.24",
-    "concurrently": "^9.1.2",
+    "concurrently": "^9.2.5",
     "esbuild": "^0.28.2",
     "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
