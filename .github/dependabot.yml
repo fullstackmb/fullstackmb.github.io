@@ -1,0 +1,26 @@
+# Dependabot version updates. Security updates are configured separately
+# (repo Settings → Code security) and still arrive as soon as an advisory
+# is published, regardless of the schedule below.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      # One PR per month for all routine bumps; usually safe to merge on green CI.
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+    # Major bumps are not grouped, so each arrives as its own PR to check by hand.
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns:
+          - "*"
