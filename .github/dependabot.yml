@@ -8,7 +8,18 @@ updates:
     schedule:
       interval: monthly
     open-pull-requests-limit: 5
+    ignore:
+      # Types should match the Node major we run, not the newest release.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
     groups:
+      # react and react-dom must move in lockstep (react-dom peer-depends on the
+      # exact react version), so always bump them in one PR. Listed first because
+      # Dependabot puts a dependency in the first group that matches.
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
       # One PR per month for all routine bumps; usually safe to merge on green CI.
       minor-and-patch:
         update-types:

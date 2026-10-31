@@ -18,10 +18,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
     build:
         name: Build Website
@@ -62,6 +58,12 @@ jobs:
       if: github.ref_name == 'main'
       needs: build
       runs-on: ubuntu-latest
+
+      # Serialize deploys only. At workflow level this also queued PR builds,
+      # and GitHub cancels all but the newest pending run in a group.
+      concurrency:
+        group: "pages"
+        cancel-in-progress: false
 
       environment:
         name: github-pages
