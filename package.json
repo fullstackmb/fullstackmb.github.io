@@ -51,7 +51,7 @@
     "dompurify": "^3.4.17",
     "jsdom": "^26.0.0",
     "jsx-async-runtime": "^0.1.8",
-    "marked": "^15.0.6",
+    "marked": "^18.1.2",
     "node-ical": "^0.27.3",
     "path": "^0.12.7",
     "react": "^19.3.1",
